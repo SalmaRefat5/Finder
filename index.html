@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+<title>Finder</title>
+
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="#" class="logo" aria-label="Finder Home">
+      Finder
+    </a>
+    <nav aria-label="nav">
+      <div class="dropdown" id="homeDropdown">
+        <button class="dropdown-toggle" id="homeDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="homeDropdownMenu">Home <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true" focusable="false"><path d="M10.35 1 6 5.25 1.65 1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown-menu" id="homeDropdownMenu" role="menu" aria-labelledby="homeDropdownToggle" tabindex="-1">
+          <a href="#" role="menuitem" tabindex="-1">Home 1</a>
+          <a href="#" role="menuitem" tabindex="-1">Home 2</a>
+          <a href="#" role="menuitem" tabindex="-1">Home 3</a>
+        </div>
+      </div>
+      <div class="dropdown" id="listingsDropdown">
+        <button class="dropdown-toggle" id="listingsDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="listingsDropdownMenu">Listings <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true" focusable="false"><path d="M10.35 1 6 5.25 1.65 1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown-menu" id="listingsDropdownMenu" role="menu" aria-labelledby="listingsDropdownToggle" tabindex="-1">
+          <a href="#" role="menuitem" tabindex="-1">Listing 1</a>
+          <a href="#" role="menuitem" tabindex="-1">Listing 2</a>
+          <a href="#" role="menuitem" tabindex="-1">Listing 3</a>
+        </div>
+      </div>
+      <div class="dropdown" id="accountDropdown">
+        <button class="dropdown-toggle" id="accountDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="accountDropdownMenu">Account <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true" focusable="false"><path d="M10.35 1 6 5.25 1.65 1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown-menu" id="accountDropdownMenu" role="menu" aria-labelledby="accountDropdownToggle" tabindex="-1">
+          <a href="#" role="menuitem" tabindex="-1">Login</a>
+          <a href="#" role="menuitem" tabindex="-1">Register</a>
+          <a href="#" role="menuitem" tabindex="-1">Profile</a>
+        </div>
+      </div>
+      <div class="dropdown" id="pagesDropdown">
+        <button class="dropdown-toggle" id="pagesDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="pagesDropdownMenu">Pages <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true" focusable="false"><path d="M10.35 1 6 5.25 1.65 1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="dropdown-menu" id="pagesDropdownMenu" role="menu" aria-labelledby="pagesDropdownToggle" tabindex="-1">
+          <a href="#" role="menuitem" tabindex="-1">Page 1</a>
+          <a href="#" role="menuitem" tabindex="-1">Page 2</a>
+          <a href="#" role="menuitem" tabindex="-1">Page 3</a>
+        </div>
+      </div>
+      <a href="#" aria-label="Documentation">Docs</a>
+      <a href="#" aria-label="Components">Components</a>
+    </nav>
+    <div class="nav-icons">
+      <button aria-label="Toggle dark mode" class="icon-button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+      <button aria-label="User account" class="icon-button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-3-3.87"></path><path d="M4 21v-2a4 4 0 0 1 3-3.87"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </button>
+      <button class="btn-primary" aria-label="Join Pro Network">+ Join Pro Network</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" aria-label="Hero section">
+    <img src="imgs/1.jpeg" alt="" class="hero-image-left" />
+    
+    <div class="hero-text">
+      <h1>Explore top-rated <br /> certified pros nearby</h1>
+      <form class="search-bar" role="search" aria-label="">
+        <input type="search" aria-label="Service needed" placeholder="What service do you need?" />
+        <input type="text" aria-label="Zip code" placeholder="Zip code" maxlength="10" />
+        <button type="submit" aria-label="Search button">Search</button>
+      </form>
+      <div class="category-tags" aria-label="">
+        <button class="category-tag" type="button">Handyperson</button>
+        <button class="category-tag" type="button">Electrician</button>
+        <button class="category-tag" type="button">Plumbing</button>
+        <button class="category-tag" type="button">Landscaping</button>
+        <button class="category-tag" type="button">Roofing</button>
+      </div>
+    </div>
+
+    <img src="imgs/2.jpeg" alt="" class="hero-image-right" />
+  </section>
+
+  <section class="browse-pros container" >
+    <div class="browse-header">
+      <h2 id="browse-pros-header">Browse pros in your area</h2>
+      <button class="btn-link" aria-label="View all browse pro categories">View all <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="pro-list" role="list">
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="18" height="12" rx="2" ry="2"></rect><path d="M1 4l9 6 9-6"></path></svg>
+        </span>
+        <span class="pro-label">Flooring</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L1 20 1 9 4 9z"></path><path d="M10 15L10 4"></path><path d="M15 20L20 20 20 9 15 9z"></path><path d="M7 9L10 4 15 9"></path></svg>
+        </span>
+        <span class="pro-label">Concrete</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2.06H8v1.888"></path><path d="M10 7h8"></path><rect x="10" y="12" width="8" height="6" rx="2" ry="2"></rect></svg>
+        </span>
+        <span class="pro-label">Cleaning</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7"></circle><path d="M6 10l3-3 3 3"></path></svg>
+        </span>
+        <span class="pro-label">Handyperson</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h2v6H6z"></path><path d="M14 11h2v6h-2z"></path><path d="M9 16h6"></path></svg>
+        </span>
+        <span class="pro-label">Painting</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"></path><path d="M15 7v2"></path><path d="M9 7v2"></path><path d="M9 13v2"></path><path d="M4 7v8"></path><path d="M19 7v8"></path></svg>
+        </span>
+        <span class="pro-label">Plumbing</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="15" width="12" height="5" rx="1" ry="1"></rect><path d="M4 15v-3"></path><path d="M16 15v-3"></path><path d="M10 12v-7"></path></svg>
+        </span>
+        <span class="pro-label">Roofing</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4v1"></path><path d="M13 8.23v3.54"></path><rect x="7" y="9" width="6" height="6"></rect></svg>
+        </span>
+        <span class="pro-label">Carpentry</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h14"></path><path d="M5 12v4"></path><path d="M19 12v4"></path></svg>
+        </span>
+        <span class="pro-label">Pest control</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9v6"></path><path d="M17 9v6"></path><path d="M8 12v3"></path><path d="M12 12v3"></path><path d="M6 9l6-7 6 7"></path></svg>
+        </span>
+        <span class="pro-label">Heating & furnace</span>
+      </div>
+      <div class="pro-item" role="listitem">
+        <span class="pro-icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="#7c8088" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16v-6a2 2 0 1 1 4 0"></path><path d="M13 10a2 2 0 1 1 4 0v6"></path></svg>
+        </span>
+        <span class="pro-label">Landscaping</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="match-projects">
+    <aside class="matched-pros" >
+      <h2>Get matched with local pros</h2>
+      <p>for your next home project.</p>
+      <img src="imgs/home.jpeg" alt="" />
+    </aside>
+    <section class="popular-projects" >
+      <h2 id="popular-projects-header">Popular projects near you</h2>
+      <button class="btn-link">View all 
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      
+        <div class="project-list">
+        <article class="project-card">
+          <img src="imgs/download (7).jpeg" alt="" class="project-image" />
+          <div class="project-info">
+            <div class="project-title">Decks & porches</div>
+            <div><span class="project-rating" aria-label="4.7 star rating">★ 4.7</span> (95)</div>
+            <div class="project-price">From $1,890</div>
+          </div>
+        </article>
+        <article class="project-card" >
+          <img src="imgs/download (6).jpeg" alt="" class="project-image" />
+          <div class="project-info">
+            <div class="project-title">Roof repair</div>
+            <div><span class="project-rating" aria-label="4.5 star rating">★ 4.5</span> (48)</div>
+            <div class="project-price">From $1,120</div>
+          </div>
+        </article>
+        <article class="project-card" >
+          <img src="imgs/download (7).jpeg" alt="" class="project-image" />
+          <div class="project-info">
+            <div class="project-title">Appliance repair</div>
+            <div><span class="project-rating" aria-label="4.8 star rating">★ 4.8</span> (113)</div>
+            <div class="project-price">From $120</div>
+          </div>
+        </article>
+        <article class="project-card" >
+          <img src="imgs/download (6).jpeg" alt="" class="project-image" />
+          <div class="project-info">
+            <div class="project-title">Gutter service</div>
+            <div><span class="project-rating" aria-label="5 star rating">★ 5.0</span> (73)</div>
+            <div class="project-price">From $390</div>
+          </div>
+        </article>
+        <article class="project-card" >
+          <img src="imgs/download (7).jpeg" alt="" class="project-image" />
+          <div class="project-info">
+            <div class="project-title">Home cleaning</div>
+            <div><span class="project-rating" aria-label="4.9 star rating">★ 4.9</span> (256)</div>
+            <div class="project-price">From $75</div>
+          </div>
+        </article>
+        <article class="project-card" >
+          <img src="imgs/download (6).jpeg" alt="" class="project-image" />
+          <div class="project-info">
+            <div class="project-title">Fence repair</div>
+            <div><span class="project-rating" aria-label="4.8 star rating">★ 4.8</span> (29)</div>
+            <div class="project-price">From $205</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </section>
+
+  <section class="popular-home-projects container" >
+    <h2>Popular home projects</h2>
+    <button class="btn-link" >View all 
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    
+        <div class="home-project-cards">
+      <article class="home-project-card" >
+        <img src="imgs/Klean Cleaning.jpeg" class="home-project-image" />
+        <div class="home-project-title">
+            One-time cleaning service
+        </div>
+        <div class="home-project-rating" >
+            ★ 4.9 (256)
+        </div>
+        <div class="home-project-price">
+            From $80
+        </div>
+        <button class="home-project-button" >
+            Book now
+        </button>
+      </article>
+      <article class="home-project-card" >
+        <img src="imgs/Klean Cleaning.jpeg"  class="home-project-image" />
+        <div class="home-project-title">
+            Handyperson for small projects
+        </div>
+        <div class="home-project-rating" >
+            ★ 4.7 (63)
+        </div>
+        <div class="home-project-price">
+            From $250
+        </div>
+        <button class="home-project-button" >
+            Book now
+        </button>
+      </article>
+      <article class="home-project-card" >
+        <img src="imgs/Klean Cleaning.jpeg"  class="home-project-image" />
+        <div class="home-project-title">
+            Fence installation & repair
+        </div>
+        <div class="home-project-rating" >★ 4.8 (29)</div>
+        <div class="home-project-price">From $310</div>
+        <button class="home-project-button" >Book now</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="expert-advice container" >
+    
+    <div class="expert-header">
+      <h2 id="expert-header">Expert advice</h2>
+      <button class="btn-link">View all 
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="expert-cards">
+      <article class="expert-card" >
+        <img src="imgs/Klean Cleaning.jpeg" class="expert-image" />
+        <div class="expert-content">
+          <div class="expert-tag">Cleaning</div>
+          <h3 class="expert-title">Expert advice from masters of cleanliness</h3>
+          <p class="expert-desc">Unlock the secrets to a spotless home with tips from cleaning professionals. From tackling stubborn stains to efficient routines.</p>
+          <time datetime="2024-10-19" class="expert-date">Oct 19, 2024</time>
+        </div>
+      </article>
+      <article class="expert-card" >
+        <img src="imgs/Laminate Flooring _ Free Samples _ Nationwide Stores.jpeg" class="expert-image" />
+        <div class="expert-content">
+          <div class="expert-tag">Flooring</div>
+          <h3 class="expert-title">How to quickly clean laminate flooring</h3>
+          <p class="expert-desc">Learn the fastest and most effective methods to clean laminate flooring without damaging its surface or protective layer.</p>
+          <time datetime="2024-09-13" class="expert-date">Sep 13, 2024</time>
+        </div>
+      </article>
+      <article class="expert-card" >
+        <img src="imgs/IFB Air Conditioners Review.jpeg"  class="expert-image" />
+        <div class="expert-content">
+          <div class="expert-tag">Air Conditioning</div>
+          <h3 class="expert-title">Choose air conditioner with air ionization</h3>
+          <p class="expert-desc">Explore the benefits of air conditioners with air ionization technology. Find out how these units improve air quality indoors.</p>
+          <time datetime="2024-09-05" class="expert-date">Sep 05, 2024</time>
+        </div>
+      </article>
+      <article class="expert-card" >
+        <img src="imgs/landspace.jpeg" alt="Landscaped garden featuring rounded edges and curves with green grass, vibrant bushes and tall trees" class="expert-image" />
+        <div class="expert-content">
+          <div class="expert-tag">Landscaping</div>
+          <h3 class="expert-title">Landscaping ideas from top local experts</h3>
+          <p class="expert-desc">Get inspired by creative landscaping ideas from the best local experts. Whether you're revamping your garden or starting fresh.</p>
+          <time datetime="2024-08-26" class="expert-date">Aug 26, 2024</time>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="how-it-works container" >
+    <h2 id="how-work-header">How it works</h2>
+    <p>Effortlessly find, connect, and hire the perfect contractor for your job - all in just three easy steps.</p>
+    <div class="steps" role="list">
+      <div class="step" role="listitem">
+        <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false" >
+          <circle cx="15" cy="10" r="4" stroke-width="1.5"></circle>
+          <path d="M17 18a5 5 0 0 0-10 0" stroke-width="1.5"></path>
+          <path d="M9 10L7 10" stroke-width="1.5"></path>
+          <path d="M17 10L15 10" stroke-width="1.5"></path>
+          <path d="M15 6H9" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <h3 class="step-title">Explore</h3>
+        <p class="step-desc">Browse through our curated list of contractors.</p>
+      </div>
+      <div class="step" role="listitem">
+        <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke-width="1.5"></rect>
+          <path d="M22 7l-10 6L2 7" stroke-width="1.5"></path>
+          <path d="M2 17v2h20v-2" stroke-width="1.5"></path>
+        </svg>
+        <h3 class="step-title">Connect</h3>
+        <p class="step-desc">Connect with them through our platform.</p>
+      </div>
+      <div class="step" role="listitem">
+        <svg class="step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 5v14m7-7H5" stroke-width="1.5" stroke-linecap="round"></path>
+          <rect width="20" height="14" x="2" y="5" rx="2" ry="2" stroke-width="1.5"></rect>
+          <path d="M10 12h4" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <h3 class="step-title">Get quotes and hire</h3>
+        <p class="step-desc">Receive quotes from interested contractors.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="grow-business">
+    <div class="grow-business-text">
+      <h2 id="grow-business-header">Grow your business with us.<br />Become a Pro today</h2>
+      <div class="grow-buttons">
+        <button class="btn-primary" >+ Add business</button>
+        <button class="btn-outline" >Learn more →</button>
+      </div>
+    </div>
+    <div class="circular-text-container" >
+        <img src="imgs/1.jpeg">
+     
+  </section>
+
+
+    <section class="common-pricing container" >
+    <div class="browse-header">
+      <h2>Common pricing references</h2>
+      <button class="btn-link" >View all 
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="project-list" >
+
+      <article class="project-card">
+        <img src="imgs/Klean Cleaning.jpeg" class="project-image" />
+        <div class="project-info">
+          <div class="project-title">Cleaning up after repairs</div>
+          <div><span class="project-rating" aria-label="4.5 star rating">★ 4.5</span> (63)</div>
+          <div class="project-price">From $150</div>
+          <button class="project-book" >Book now</button>
+        </div>
+      </article>
+      <article class="project-card" >
+        <img src="imgs/download (7).jpeg"  class="project-image" />
+        <div class="project-info">
+          <div class="project-title">Installation of flat roofs</div>
+          <div><span class="project-rating" aria-label="4.3 star rating">★ 4.3</span> (18)</div>
+          <div class="project-price">From $1,870</div>
+          <button class="project-book" >Book now</button>
+        </div>
+      </article>
+      <article class="project-card" >
+        <img src="imgs/Klean Cleaning.jpeg"  class="project-image" />
+        <div class="project-info">
+          <div class="project-title">Handyperson for small projects</div>
+          <div><span class="project-rating" aria-label="4.7 star rating">★ 4.7</span> (35)</div>
+          <div class="project-price">From $230</div>
+          <button class="project-book">Book now</button>
+        </div>
+      </article>
+      <article class="project-card" >
+        <img src="imgs/download (7).jpeg" class="project-image" />
+        <div class="project-info">
+          <div class="project-title">One-time cleaning service</div>
+          <div><span class="project-rating" aria-label="4.9 star rating">★ 4.9</span> (127)</div>
+          <div class="project-price">From $120</div>
+          <button class="project-book">Book now</button>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<br><br><br>
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <form class="footer-newsletter" >
+        <label for="email-subscribe" class="sr-only">Email</label>
+        <input id="email-subscribe" name="email-subscribe" type="email" placeholder="Your email" required aria-required="true" style="padding: 0.5rem 1rem; border-radius: 6px; border: none; font-size: 0.95rem;" />
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+      <div class="footer-contact">
+        Need help? <a href="#" style="font-weight: 700; color: #f3f4f6">Contact us</a>
+      </div>
+    </div>
+    <div class="footer-content" role="list">
+      <section class="footer-brand" role="listitem" aria-label="Brand info">
+        <a href="#" class="logo" aria-label="Finder Home">
+          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="fill:#dc6e6b; height:28px; width:28px;">
+          <path d="M18 19a5 5 0 1 1-4-8 5 5 0 0 1 4 8Zm-7-1a7 7 0 1 0 13.93 2.36 10.37 10.37 0 0 0-.57-1.29 8 8 0 1 0-13.36 0c-.11.23-.21.46-.28.6a7.12 7.12 0 0 0 .28-.09Z"></path></svg>Finder
+        </a>
+        <p>Connecting you with reliable local contractors for all your service needs.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="12" height="12" rx="3" ry="3"></rect><circle cx="8" cy="8" r="3"></circle><line x1="12.5" y1="3.5" x2="12.5" y2="3.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook" title="Facebook">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter" title="Twitter">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 16 2a4.49 4.49 0 0 0-4.44 5.52A12.94 12.94 0 0 1 3 4s-4 9 5 13a13.16 13.16 0 0 1-8 2c12 7 27 0 27-16a9.94 9.94 0 0 0-.08-1.82A7 7 0 0 0 23 3z"></path></svg>
+          </a>
+        </div>
+      </section>
+      <nav class="footer-links" role="list">
+        <div class="footer-column" role="listitem" aria-label="Popular categories">
+          <h4>Popular categories</h4>
+          <ul>
+            <li><a href="#">Air conditioning</a></li>
+            <li><a href="#">Painting</a></li>
+            <li><a href="#">Electrician</a></li>
+            <li><a href="#">Concrete</a></li>
+            <li><a href="#">Plumbing</a></li>
+            <li><a href="#">Roofing</a></li>
+            <li><a href="#">Cleaning</a></li>
+            <li><a href="#">Heating & furnace</a></li>
+            <li><a href="#">Carpentry</a></li>
+            <li><a href="#">Flooring</a></li>
+            <li><a href="#">Pest control</a></li>
+            <li><a href="#">Landscaping</a></li>
+          </ul>
+        </div>
+        <div class="footer-column" role="listitem" aria-label="Company">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Press & announcements</a></li>
+            <li><a href="#">Careers at Finder</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-cities" aria-label="Top cities">
+      <button class="city-badge" type="button">New York</button>
+      <button class="city-badge" type="button">Chicago</button>
+      <button class="city-badge" type="button">Indianapolis</button>
+      <button class="city-badge" type="button">Boston</button>
+      <button class="city-badge" type="button">Atlanta</button>
+      <button class="city-badge" type="button">Cincinnati</button>
+      <button class="city-badge" type="button">Los Angeles</button>
+      <button class="city-badge" type="button">Dallas</button>
+      <button class="city-badge" type="button">Pittsburgh</button>
+      <button class="city-badge" type="button">Tampa</button>
+    </div>
+    
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+
